@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: #f1f4f9;
+  color: #333;
+}
+header {
+  background-color: #0047ab;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #0050d1;
+}
+
+.tab {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab:hover,
+.tab.active-tab {
+  background-color: #0040b0;
+  border-bottom: 3px solid #ffdd57;
+}
+
+.content {
+  display: none;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content.active-content {
+  display: block;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #005dc1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .tab {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}

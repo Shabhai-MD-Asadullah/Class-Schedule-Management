@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Class Management System</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container" id="home">
+    <h1 class="main-title fade-in">Class Management System</h1>
+    <div id="button-container" class="fade-in">
+      <button class="main-btn" onclick="navigate('teacher')">Teacher's</button>
+      <button class="main-btn" onclick="navigate('adminform')">Admin</button>
+    </div>
+  </div>
+
+  <div class="main-container hidden" id="adminform">
+    <h2>Admin Portal</h2>
+    <button class="sub-btn" onclick="navigate('adminlogin')">Log In</button>
+    <button class="back-btn" onclick="navigate('home')">← Back</button>
+  </div>
+
+  <div class="main-container hidden" id="adminlogin">
+    <h2>Admin Login</h2>
+    <input type="text" placeholder="Enter Username:" class="input-field" id="adminUser" />
+    <input type="password" placeholder="Enter Password:" class="input-field" id="adminPass" />
+    <button class="sub-btn" onclick="checkAdminLogin()">Submit</button>
+    <button class="back-btn" onclick="navigate('adminform')">← Back</button>
+  </div>
+
+  <div class="main-container hidden" id="teacher">
+    <h2>Teacher Portal</h2>
+    <button class="sub-btn" onclick="navigate('teacherlogin')">Log In</button>
+    <p class="text-link">No account? <span onclick="navigate('teachersignup')">Sign Up</span></p>
+    <button class="back-btn" onclick="navigate('home')">← Back</button>
+  </div>
+
+  <div class="main-container hidden" id="teacherlogin">
+    <h2>Teacher Login</h2>
+    <input type="text" placeholder="Enter Username:" class="input-field" id="uname" />
+    <input type="password" placeholder="Enter Password:" class="input-field" id="pwd" />
+    <button class="sub-btn" onclick="checkTeacherLogin()">Submit</button>
+    <button class="back-btn" onclick="navigate('teacher')">← Back</button>
+  </div>
+
+  <div class="main-container hidden" id="teachersignup">
+    <h2>Teacher Signup</h2>
+    <input type="text" placeholder="Enter Username:" class="input-field" id="teacherName"/>
+    <input type="password" placeholder="Enter Password:" class="input-field" id="teacherPass"/>
+    <input type="password" placeholder="Enter Conform Password:" class="input-field" id="teacherConformPass"/>
+    <button class="sub-btn" onclick="checkTeacherSignup()">Submit</button>
+    <button class="back-btn" onclick="navigate('teacher')">← Back</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
