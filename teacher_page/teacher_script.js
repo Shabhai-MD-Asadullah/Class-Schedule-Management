@@ -1,5 +1,3 @@
-
-
 // Set today’s date
 document.getElementById("today-date").textContent = new Date().toDateString();
 function showTab(tabId, element) {
@@ -17,3 +15,4 @@ function endPeriod() {
   alert("Period ended. Next lecturer has been notified.");
   // Replace with AJAX or PHP logic later
 }
+
