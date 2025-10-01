@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class or College Task Manager</title>
+    <link rel="stylesheet" href="teacher_style.css" />
+  </head>
+  <body>
+    <header>Class or College Task Management</header>
+
+    <div class="tabs">
+      <div class="tab active-tab" onclick="showTab('dashboard', this)">
+        Dashboard
+      </div>
+      <div class="tab" onclick="showTab('teachers', this)">Teachers</div>
+      <div class="tab" onclick="showTab('schedule', this)">Schedule</div>
+      <div class="tab" onclick="showTab('endperiod', this)">End Period</div>
+    </div>
+
+    <div id="dashboard" class="content active-content">
+      <h2>Welcome to BITS College Portal 👋</h2>
+      <p>Branch: DCME | Academic Year: 2024-2025</p>
+      <p><strong>Today's Date:</strong> <span id="today-date"></span></p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px">
+        <div
+          style="
+            flex: 1;
+            min-width: 150px;
+            background: #e8f0fe;
+            padding: 15px;
+            border-radius: 8px;
+          "
+        >
+          <h3>👨‍🏫 Total Teachers</h3>
+          <p><strong>12</strong></p>
+        </div>
+        <div
+          style="
+            flex: 1;
+            min-width: 150px;
+            background: #fcefe3;
+            padding: 15px;
+            border-radius: 8px;
+          "
+        >
+          <h3>📚 Periods Today</h3>
+          <p><strong>6</strong></p>
+        </div>
+        <div
+          style="
+            flex: 1;
+            min-width: 150px;
+            background: #e9fbe9;
+            padding: 15px;
+            border-radius: 8px;
+          "
+        >
+          <h3>✅ Completed</h3>
+          <p><strong>2</strong> of 6</p>
+        </div>
+      </div>
+
+      <div
+        style="
+          margin-top: 20px;
+          background: #fffbe7;
+          padding: 12px 18px;
+          border-left: 5px solid #ffd700;
+          border-radius: 6px;
+        "
+      >
+        <p>
+          <strong>🔔 Last Notification:</strong> Ms. Anjali's class has ended.
+          Next: Mr. Kiran at 11:00 AM
+        </p>
+      </div>
+    </div>
+
+    <div id="teachers" class="content">
+      <h2>Teachers</h2>
+      <ul>
+        <li>Mr. Ramesh - Physics</li>
+        <li>Ms. Anjali - Mathematics</li>
+        <li>Mr. Kiran - Chemistry</li>
+      </ul>
+    </div>
+
+    <div id="schedule" class="content">
+      <h2>Today’s Period Schedule</h2>
+      <table>
+        <tr>
+          <th>Teacher</th>
+          <th>Branch</th>
+          <th>Subject</th>
+          <th>Time</th>
+        </tr>
+        <tr>
+          <td>Mr. Ramesh</td>
+          <td>DCME</td>
+          <td>Physics</td>
+          <td>9:00 - 9:50</td>
+          
+        </tr>
+        <tr>
+          <td>Ms. Anjali</td>
+          <td>DCME</td>
+          <td>Mathematics</td>
+          <td>10:00 - 10:50</td>
+        </tr>
+        <tr>
+          <td>Mr. Kiran</td>
+          <td>Chemistry</td>
+          <td>DCME</td>
+          <td>11:00 - 11:50</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="endperiod" class="content">
+      <h2>End Current Period</h2>
+      <p><strong>Current Period:</strong> 2nd Period - Ms. Anjali</p>
+      <button onclick="endPeriod()">End Period</button>
+    </div>
+
+    <script src="teacher_script.js"></script>
+  </body>
+</html>
