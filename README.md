@@ -1,1 +1,1 @@
-# Class-Schedule-Management
+# Class-Schedule-Management (CSM)
