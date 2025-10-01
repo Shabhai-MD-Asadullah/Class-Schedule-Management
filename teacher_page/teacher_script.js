@@ -1,5 +1,3 @@
-
-
 // Set today’s date
 document.getElementById("today-date").textContent = new Date().toDateString();
 function showTab(tabId, element) {
