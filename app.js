@@ -8,7 +8,7 @@ function navigate(id) {
 function checkAdminLogin() {
   const password = document.getElementById("adminPass").value.trim();
   if (password === "Admin1234") {
-    window.location.href = "admin_dashboard.html";
+    window.location.href = "admin_page/admin_dashboard.html";
   } else {
     alert("Incorrect password. Please try again.");
   }
@@ -19,7 +19,7 @@ function checkTeacherLogin() {
   if (name === document.getElementById("teacherName").value.trim()) {
     if (password === document.getElementById("teacherPass").value.trim()) {
       alert(`Welcome ${name} Sir, You are successfully logged in.`);
-      window.location.href = "teacher_dashboard.html";
+      window.location.href = "teacher_page/teacher_dashboard.html";
     } else {
       alert("Incorrect password. Please try again.");
     }
@@ -32,7 +32,7 @@ function checkTeacherSignup() {
   const password = document.getElementById("teacherPass").value.trim();
   if (password === document.getElementById("teacherConformPass").value.trim()) {
     alert(`Welcome ${name} Sir, You are successfully signed up`);
-    window.location.href = "teacher_dashboard.html";
+    window.location.href = "teacher_page/teacher_dashboard.html";
   } else {
     alert("Incorrect password. Please try again.");
   }
