@@ -39,14 +39,17 @@
 
   <div class="main-container hidden" id="teacherlogin">
     <h2>Teacher Login</h2>
+    <form action="login.php" method="POST">
     <input type="text" placeholder="Enter Username:" class="input-field" id="uname" />
     <input type="password" placeholder="Enter Password:" class="input-field" id="pwd" />
     <button class="sub-btn" onclick="checkTeacherLogin()">Submit</button>
     <button class="back-btn" onclick="navigate('teacher')">← Back</button>
+    </form>
   </div>
 
   <div class="main-container hidden" id="teachersignup">
     <h2>Teacher Signup</h2>
+    <form action="signup.php" method="POST"
     <input type="text" placeholder="Enter Username:" class="input-field" id="teacherName"/>
     <input type="password" placeholder="Enter Password:" class="input-field" id="teacherPass"/>
     <input type="password" placeholder="Enter Conform Password:" class="input-field" id="teacherConformPass"/>
